@@ -1,0 +1,15 @@
+<h2>{{ displaySet.name }}</h2>
+<input [(ngModel)]="displaySet.name">
+<div *ngFor="let itemGroup of displaySet.itemGroups">
+  <h3>{{ itemGroup.name }}</h3>
+  <input [(ngModel)]="itemGroup.name">
+  <ul>
+    <li *ngFor="let item of itemGroup.items">
+      <input [(ngModel)]="item.name">
+    </li>
+  </ul>
+  <hr>
+</div>
+<button (click)="save()">저장</button>
+<hr>
+<a [routerLink]="['/']">목록</a>

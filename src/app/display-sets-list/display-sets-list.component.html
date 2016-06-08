@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let displaySet of displaySets">
+    <a [routerLink]="['/displaySets', displaySet.id]">{{ displaySet.name }}</a>
+  </li>
+</ul>
